@@ -2,7 +2,7 @@
 require_once '../src/config/database.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $playerID = $_POST['playerID']; // Add sanitization
+    $playerID = $_POST['playerID']; 
 
     $stmt = $connection->prepare("DELETE FROM Player WHERE PlayerID = ?");
     $stmt->bind_param("i", $playerID);
