@@ -2,11 +2,11 @@ function loadTeams() {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText);
             var teams = JSON.parse(this.responseText);
             var html = "";
             for (var i = 0; i < teams.length; i++) {
                 html += "<div class='team-card'><div class='team-name'>" + teams[i].name +
+                        "</div><div class='team-players'>" + teams[i].players +
                         "</div><button onclick='deleteTeam(" + teams[i].id + ")'>Delete</button></div>";
             }
             document.getElementById("team-list").innerHTML = html;
