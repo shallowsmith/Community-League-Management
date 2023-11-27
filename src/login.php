@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     header("Location: ../public_html/teamList.html");
                     break;
                 case 'team':
-                    header("Location: ../public_html/playerList.html");
+                    header("Location: ../public_html/playerList.php");
                     break;
                 case 'player':
                     header("Location: ../public_html/player.html");

@@ -3,6 +3,7 @@
     <head>
         <title>Registration</title>
         <link rel="stylesheet" href="css/registration-style.css">
+        <script src="js/getTeamsForRegistration.js"></script>
     </head>
     <body>
         <h1>Registration</h1>
@@ -15,11 +16,17 @@
             <input type="password" id="password" name="password" required>
 
             <label for="user_type">User Type:</label>
-            <select id="user_type" name="user_type">
+            <select id="user_type" name="user_type" onchange="showTeams(this.value)">
                 <option value="admin">Admin</option>
-                <option value="user">Team</option>
-                <option value="user">Player</option>
+                <option value="team">Team</option>
             </select>
+
+            <div id="teamSelection" style="display: none;">
+                <label for="team_id">Select Team:</label>
+                <select id="team_id" name="TeamID">
+                    <!-- AJAX response -->
+                </select>
+            </div>
 
             <input type="submit" value="Register">
             <a href="login.html" class="back-button">Go Back</a>
