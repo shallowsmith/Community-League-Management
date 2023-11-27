@@ -1,3 +1,4 @@
+<?php
 // Database configuration
 $host = 'localhost';
 $username = 'root'; 
@@ -14,3 +15,5 @@ if ($connection->connect_error) {
 
 // Connection successful
 echo "Connected to the database successfully!";
+
+?>

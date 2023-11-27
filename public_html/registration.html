@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <link rel="stylesheet" href="css/registration-style.css">
+    </head>
+    <body>
+        <h1>Registration</h1>
+
+        <form action="../src/registration.php" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="user_type">User Type:</label>
+            <select id="user_type" name="user_type">
+                <option value="admin">Admin</option>
+                <option value="user">Team</option>
+                <option value="user">Player</option>
+            </select>
+
+            <input type="submit" value="Register">
+            <a href="login.html" class="back-button">Go Back</a>
+        </form>
+    </body>
+    </html>
