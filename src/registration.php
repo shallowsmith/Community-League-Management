@@ -1,5 +1,5 @@
 <?php
-require_once 'config/registration.php'; 
+require_once 'config/database.php'; 
 
 // Function to sanitize user input
 function sanitizeInput($data) {

@@ -1,5 +1,5 @@
 <?php
-require_once 'config/registration.php';
+require_once 'config/database.php';
 
 $query = "SELECT Name FROM Team";
 $result = $connection->query($query);
