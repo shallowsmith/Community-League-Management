@@ -103,7 +103,7 @@ $connection->close();
                         <td><?php echo htmlspecialchars($player['Name']); ?></td>
                         <td><?php echo htmlspecialchars($player['Number']); ?></td>
                         <td>
-                            <form action="deletePlayer.php" method="post">
+                            <form action="../src/deletePlayer.php" method="post">
                                 <input type="hidden" name="playerID" value="<?php echo $player['PlayerID']; ?>">
                                 <button type="submit">Delete</button>
                             </form>
@@ -117,7 +117,7 @@ $connection->close();
         <p>No players found in your team.</p>
     <?php endif; ?>
 
-    <form action="addPlayer.php" method="post">
+    <form action="../src/addPlayer.php" method="post">
         <input type="hidden" name="teamID" value="<?php echo $teamID; ?>">
         <input type="text" name="playerName" placeholder="Player Name" required>
         <input type="number" name="playerNumber" placeholder="Player Number" required>

@@ -33,6 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $connection->close();
 }
 
-header("Location: eventList.php");
+header("Location: ../public_html/eventList.php");
 exit();
 ?>

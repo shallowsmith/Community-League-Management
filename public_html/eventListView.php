@@ -81,7 +81,7 @@ $connection->close();
             <?php endforeach; ?>
         </table>
     <?php else: ?>
-        <p>No events found for your team.</p>
+        <p style="text-align: center">No events found for your team.</p>
     <?php endif; ?>
 </body>
 </html>

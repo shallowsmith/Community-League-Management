@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("i", $playerID);
 
     if ($stmt->execute()) {
-        header("Location: playerList.php");
+        header("Location: ../public_html/playerList.php");
     } else {
         echo "Error: " . $stmt->error;
     }

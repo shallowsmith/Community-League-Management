@@ -49,7 +49,7 @@ $connection->close();
     </div>
 
     <h2>Add Event</h2>
-    <form action="addEvent.php" method="post">
+    <form action="../src/addEvent.php" method="post">
         <label>Date: <input type="date" name="gameDate" required></label>
         <label>Time: <input type="time" name="gameTime" required></label>
         <label>Location: 
@@ -94,7 +94,7 @@ $connection->close();
                 <td><?= $event['HomeTeam'] ?></td>
                 <td><?= $event['AwayTeam'] ?></td>
                 <td>
-                    <form action="deleteEvent.php" method="post">
+                    <form action="../src/deleteEvent.php" method="post">
                         <input type="hidden" name="scheduleID" value="<?= $event['ScheduleID'] ?>">
                         <button type="submit">Delete</button>
                     </form>
