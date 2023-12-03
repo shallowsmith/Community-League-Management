@@ -5,9 +5,14 @@ function loadTeams() {
             var teams = JSON.parse(this.responseText);
             var html = "";
             for (var i = 0; i < teams.length; i++) {
-                html += "<div class='team-card'><div class='team-name'>" + teams[i].name +
-                        "</div><div class='team-players'>" + teams[i].players +
-                        "</div><button onclick='deleteTeam(" + teams[i].id + ")'>Delete</button></div>";
+                html += "<div class='team-card'>" +
+                          "<div class='team-name'>" + teams[i].name + "</div>" +
+                          "<div class='team-players'>Catchers: " + teams[i].catchers + "</div>" +
+                          "<div class='team-players'>Pitchers: " + teams[i].pitchers + "</div>" +
+                          "<div class='team-players'>Infield: " + teams[i].infield + "</div>" +
+                          "<div class='team-players'>Outfield: " + teams[i].outfield + "</div>" +
+                          "<button onclick='deleteTeam(" + teams[i].id + ")'>Delete</button>" +
+                        "</div>";
             }
             document.getElementById("team-list").innerHTML = html;
         }
@@ -21,7 +26,7 @@ function deleteTeam(teamID) {
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             alert(this.responseText);
-            loadTeams(); // Reload the team list
+            loadTeams(); 
         }
     };
     xhr.open("POST", "../src/deleteTeam.php", true);

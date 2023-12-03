@@ -3,11 +3,12 @@ require_once '../src/config/database.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $teamID = $_POST['teamID'];
-    $playerName = $_POST['playerName']; // Add sanitization
-    $position = $_POST['position']; // Add sanitization
+    $playerName = $_POST['playerName'];
+    $playerNumber = $_POST['playerNumber'];  
+    $position = $_POST['position']; 
 
-    $stmt = $connection->prepare("INSERT INTO Player (Name, Position, TeamID) VALUES (?, ?, ?)");
-    $stmt->bind_param("ssi", $playerName, $position, $teamID);
+    $stmt = $connection->prepare("INSERT INTO Player (Name, Number, Position, TeamID) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("sisi", $playerName, $playerNumber, $position, $teamID);
 
     if ($stmt->execute()) {
         header("Location: playerList.php");
