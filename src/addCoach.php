@@ -1,11 +1,11 @@
 <?php
-require_once '../src/config/database.php';
+require_once 'config/database.php';
 
 // Insert new coach record
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $teamID = $_POST['teamID'] ?? null;
     $coachName = $_POST['coachName'] ?? '';
-    
+
     $teamID = filter_var($teamID, FILTER_SANITIZE_NUMBER_INT);
     $coachName = filter_var($coachName, FILTER_SANITIZE_STRING);
 
