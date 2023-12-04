@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button[type="submit"], input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Styles for the event addition form */
+form[action="addEvent.php"] {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form[action="addEvent.php"] label {
+    margin-right: 10px;
+}
+
+form[action="addEvent.php"] input, form[action="addEvent.php"] select {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Styles for messages and form errors */
+p.message {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    table {
+        width: 95%;
+    }
+
+    form[action="addEvent.php"] {
+        max-width: 95%;
+    }
+}
