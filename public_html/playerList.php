@@ -143,7 +143,7 @@ $connection->close();
                 <tr>
                     <td><?php echo htmlspecialchars($coach['Name']); ?></td>
                     <td>
-                        <form action="deleteCoach.php" method="post">
+                        <form action="../src/deleteCoach.php" method="post">
                             <input type="hidden" name="coachID" value="<?php echo $coach['CoachID']; ?>">
                             <button type="submit">Delete</button>
                         </form>
@@ -156,7 +156,7 @@ $connection->close();
     <?php endif; ?>
     </div>
 
-    <form action="addCoach.php" method="post">
+    <form action="../src/addCoach.php" method="post">
     <input type="hidden" name="teamID" value="<?php echo $teamID; ?>">
     <input type="text" name="coachName" placeholder="Coach Name" required>
     <button type="submit">Add Coach</button>
