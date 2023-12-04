@@ -8,6 +8,7 @@ function showTeams(userType) {
     }
 }
 
+// Fetches teams from the database and displays them in a dropdown menu
 function fetchTeams() {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {

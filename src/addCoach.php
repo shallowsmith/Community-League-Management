@@ -1,15 +1,15 @@
 <?php
 require_once '../src/config/database.php';
 
+// Insert new coach record
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $teamID = $_POST['teamID'] ?? null;
     $coachName = $_POST['coachName'] ?? '';
-
-    // Sanitize input
+    
     $teamID = filter_var($teamID, FILTER_SANITIZE_NUMBER_INT);
     $coachName = filter_var($coachName, FILTER_SANITIZE_STRING);
 
-    // Insert new coach record
+
     $stmt = $connection->prepare("INSERT INTO Coach (Name, TeamID) VALUES (?, ?)");
     $stmt->bind_param("si", $coachName, $teamID);
     $stmt->execute();

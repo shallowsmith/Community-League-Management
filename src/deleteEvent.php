@@ -7,6 +7,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
+// Delete event
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $scheduleID = $_POST['scheduleID'];
 

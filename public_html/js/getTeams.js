@@ -1,3 +1,4 @@
+// Loads all teams from the database and displays them on the page
 function loadTeams() {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
@@ -22,6 +23,7 @@ function loadTeams() {
     xhr.send();
 }
 
+// Deletes a team from the database
 function deleteTeam(teamID) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {

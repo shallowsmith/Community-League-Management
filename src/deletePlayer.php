@@ -1,6 +1,7 @@
 <?php
 require_once '../src/config/database.php';
 
+// Delete player record
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $playerID = $_POST['playerID']; 
 

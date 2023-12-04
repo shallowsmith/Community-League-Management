@@ -1,6 +1,7 @@
 <?php
 require_once 'config/database.php';
 
+// Delete team record
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['teamID'])) {
     $teamID = $connection->real_escape_string($_POST['teamID']);
 

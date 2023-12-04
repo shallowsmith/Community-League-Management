@@ -7,6 +7,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
+// Insert new event
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $gameDate = $_POST['gameDate'];
     $gameTime = $_POST['gameTime'];

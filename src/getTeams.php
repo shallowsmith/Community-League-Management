@@ -1,6 +1,7 @@
 <?php
 require_once 'config/database.php';
 
+// Get all teams and their players and coaches and return a json array of teams
 $query = "SELECT 
             Team.TeamID, 
             Team.Name AS TeamName, 
@@ -17,6 +18,8 @@ $query = "SELECT
 $result = $connection->query($query);
 
 $teams = [];
+
+// Build an array of teams
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $teams[] = [
@@ -29,6 +32,7 @@ if ($result->num_rows > 0) {
             "coach" => $row['CoachName']
         ];
     }
+    // Return the array as a json string
     echo json_encode($teams);
 } else {
     echo json_encode([]);

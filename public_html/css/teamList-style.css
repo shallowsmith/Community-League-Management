@@ -1,4 +1,4 @@
-/* General Body styles */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
@@ -6,79 +6,79 @@ body {
     padding: 0;
 }
 
-/* Header styles */
+
 h1 {
     color: #333;
     text-align: center;
     margin-top: 20px;
 }
 
-/* Form styles */
+
 form {
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Button styles */
+
 button[type="submit"], input[type="submit"] {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px; /* Optional: for rounded corners */
+    border-radius: 4px; 
     cursor: pointer;
 }
 
 .team-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* This will center the cards in the middle of the page */
+    justify-content: center; 
     align-items: flex-start;
-    max-width: 1200px; /* Adjust this value based on the total width of 4 cards + margins */
-    margin: 0 auto; /* This will center the container on the page */
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 .team-card {
-    width: calc(25% - 20px); /* Subtract the total margin from the width */
-    margin: 10px; /* Half the margin from each side */
+    width: calc(25% - 20px); 
+    margin: 10px; 
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* You might want to set a min-width to ensure that the cards do not become too small on larger screens */
-    min-width: 250px; /* Optional: minimum width for smaller screens */
+   
+    min-width: 250px; 
 }
 
 .team-name {
     font-size: 20px;
     font-weight: bold;
-    color: #333; /* Match the header text color */
+    color: #333; 
     margin-bottom: 10px;
 }
 
 .team-members, .team-member {
-    color: #333; /* Match the text color */
+    color: #333; 
 }
 
 .team-member {
     margin-bottom: 5px;
 }
 
-/* Input styles */
+
 input[type="text"], input[type="number"], select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    margin-right: 10px; /* Adjust as necessary for layout */
+    margin-right: 10px; 
 }
 
-/* Adjustments for team card contents to center align with the header */
+
 .team-card {
-    text-align: center; /* Center-align the contents of the team card */
+    text-align: center; 
 }
 
 .team-name, .team-members {
-    display: block; /* Ensure these elements are block-level for text-align to work */
+    display: block;
 }

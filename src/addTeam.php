@@ -4,7 +4,7 @@ require_once 'config/database.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['teamName'])) {
     $teamName = $connection->real_escape_string($_POST['teamName']);
 
-    // Prepare SQL statement to insert new team
+    // Insert new team  
     $stmt = $connection->prepare("INSERT INTO Team (Name) VALUES (?)");
     $stmt->bind_param("s", $teamName);
     if ($stmt->execute()) {

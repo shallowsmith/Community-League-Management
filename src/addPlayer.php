@@ -1,6 +1,7 @@
 <?php
 require_once '../src/config/database.php';
 
+// Insert new player record
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $teamID = $_POST['teamID'];
     $playerName = $_POST['playerName'];
