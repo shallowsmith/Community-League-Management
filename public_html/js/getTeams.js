@@ -11,6 +11,7 @@ function loadTeams() {
                           "<div class='team-players'>Pitchers: " + teams[i].pitchers + "</div>" +
                           "<div class='team-players'>Infield: " + teams[i].infield + "</div>" +
                           "<div class='team-players'>Outfield: " + teams[i].outfield + "</div>" +
+                          "<div>Coach: " + (teams[i].coach || 'No coach assigned') + "</div>" +
                           "<button onclick='deleteTeam(" + teams[i].id + ")'>Delete</button>" +
                         "</div>";
             }

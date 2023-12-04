@@ -1,13 +1,17 @@
 <?php
 require_once 'config/database.php';
 
-$query = "SELECT Team.TeamID, Team.Name AS TeamName, 
-          COUNT(CASE WHEN Player.Position = 'Catcher' THEN 1 END) AS Catchers,
-          COUNT(CASE WHEN Player.Position = 'Pitcher' THEN 1 END) AS Pitchers,
-          COUNT(CASE WHEN Player.Position = 'Infield' THEN 1 END) AS Infield,
-          COUNT(CASE WHEN Player.Position = 'Outfield' THEN 1 END) AS Outfield
+$query = "SELECT 
+            Team.TeamID, 
+            Team.Name AS TeamName, 
+            COUNT(CASE WHEN Player.Position = 'Catcher' THEN 1 END) AS Catchers,
+            COUNT(CASE WHEN Player.Position = 'Pitcher' THEN 1 END) AS Pitchers,
+            COUNT(CASE WHEN Player.Position = 'Infield' THEN 1 END) AS Infield,
+            COUNT(CASE WHEN Player.Position = 'Outfield' THEN 1 END) AS Outfield,
+            Coach.Name AS CoachName
           FROM Team 
-          LEFT JOIN Player ON Team.TeamID = Player.TeamID 
+          LEFT JOIN Player ON Team.TeamID = Player.TeamID
+          LEFT JOIN Coach ON Team.TeamID = Coach.TeamID
           GROUP BY Team.TeamID";
 
 $result = $connection->query($query);
@@ -21,7 +25,8 @@ if ($result->num_rows > 0) {
             "catchers" => $row['Catchers'],
             "pitchers" => $row['Pitchers'],
             "infield" => $row['Infield'],
-            "outfield" => $row['Outfield']
+            "outfield" => $row['Outfield'],
+            "coach" => $row['CoachName']
         ];
     }
     echo json_encode($teams);
